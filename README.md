@@ -747,12 +747,14 @@ Just say where you want to go next.
 ## Running our example in docker
 
 Note: we're using 18080 and 19443 as on the test system ports 8080 and 8443 were already in use.  Our SP (nodejs application) is available on port 3000
-```
+
+```bash
 docker run --platform linux/amd64 --rm --name saml-idp -p 18080:8080 -p 19443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=http://localhost:3000/metadata -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://localhost:3000/login/callback -e SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE=http://localhost:3000/logout/callback kristophjunge/test-saml-idp
 ```
+ref: https://github.com/kristophjunge/docker-test-saml-idp/tree/master
 
 Running our Nodejs SP app
-```
+```bash
 npx ts-node-dev src/index.ts
 ```
 
