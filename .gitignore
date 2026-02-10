@@ -47,3 +47,4 @@ pyenv.cfg
 *~
 lib/dependencies
 .venv/
+node_modules/
