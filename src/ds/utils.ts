@@ -141,11 +141,15 @@ export type OidDescriptor = {
 };
 
 export type AuthTestBody = {
-  ldapUrl?: string;
+  ldapUrl?: string;            // optional override
   bindDn: string;
   bindPassword: string;
-};
 
+  // Optional lab controls
+  startTls?: boolean;          // only for ldap://
+  allowInsecureTLS?: boolean;  // rejectUnauthorized=false
+  caCertPem?: string;          // PEM CA string (optional)
+};
 
 export type DirectoryInfo = {
   baseDn: string | null;
