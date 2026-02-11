@@ -17,6 +17,7 @@
     "express-session": "^1.19.0",
     "fast-xml-parser": "^5.3.5",
     "jsonwebtoken": "^9.0.3",
+    "ldapts": "^8.1.6",
     "passport": "^0.7.0"
   },
   "devDependencies": {
